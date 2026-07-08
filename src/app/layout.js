@@ -15,6 +15,7 @@ export const metadata = {
   title: "CryptoUPI",
   description: "Send crypto straight to any UPI ID",
   themeColor: "#5b3df6",
+  manifest: "/manifest.json",
   icons: {
     icon: "/icon-192.png",
     apple: "/icon-192.png",
