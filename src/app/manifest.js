@@ -1,0 +1,23 @@
+export default function manifest() {
+  return {
+    name: 'CryptoUPI',
+    short_name: 'CryptoUPI',
+    description: 'Send crypto straight to any UPI ID',
+    start_url: '/',
+    display: 'standalone',
+    background_color: '#f3f4fa',
+    theme_color: '#5b3df6',
+    icons: [
+      {
+        src: '/icon-192.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      {
+        src: '/icon-512.png',
+        sizes: '512x512',
+        type: 'image/png',
+      },
+    ],
+  };
+}
