@@ -262,6 +262,10 @@ export default function Home() {
       await tx.wait();
 
       setTxStatus('confirmed');
+      setUpiId('');
+      setUpiValid(null);
+      setEthAmount('');
+      setInrRate(null);
 
       saveToHistory({
         wallet: walletAddress,
