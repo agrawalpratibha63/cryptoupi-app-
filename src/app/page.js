@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 
 const styles = {
@@ -133,7 +133,7 @@ export default function Home() {
   const [txStatus, setTxStatus] = useState('');
   const [history, setHistory] = useState([]);
 
-  useState(() => {
+  useEffect(() => {
     const saved = localStorage.getItem('cryptoupi_history');
     if (saved) {
       try {
@@ -142,7 +142,7 @@ export default function Home() {
         console.log('History load error:', e);
       }
     }
-  });
+  },[]);
 
   function saveToHistory(record) {
     setHistory((prev) => {
