@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import RegisterSW from './register-sw';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,12 +15,15 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "CryptoUPI",
   description: "Send crypto straight to any UPI ID",
-  themeColor: "#5b3df6",
   manifest: "/manifest.json",
   icons: {
     icon: "/icon-192.png",
     apple: "/icon-192.png",
   },
+};
+
+export const viewport = {
+  themeColor: "#5b3df6",
 };
 
 export default function RootLayout({ children }) {
@@ -28,7 +32,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col"><RegisterSW />{children}</body>
     </html>
   );
 }
